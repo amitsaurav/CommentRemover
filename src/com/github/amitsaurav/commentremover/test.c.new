@@ -1,0 +1,23 @@
+#include <stdio.h> 
+
+int main() {
+	
+	int a = 10, b = 20;
+	
+	
+	int c = a + b;
+
+		char *d = "This string has // comments which shouldn't be stripped";
+	char *e = "This string has // \"quoted comments\" which shouldn't be stripped";
+	char *f = "This string has /* multi-line comment */ which shouldn't be stripped";
+
+	
+
+	char g = '//syntactically incorrect but making sure that program handles it';
+	char h = '\''; 	char i = '/* once again, syntactically incorrect */';
+
+	return 0;
+}
+"Let's make sure that a syntactically incorrect file does not break the program.
+Here I am ommitting the closing quote. We can do the same with a single quote,
+which might be another test case to consider, but would have to be in a separate file.

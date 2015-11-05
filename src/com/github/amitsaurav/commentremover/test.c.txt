@@ -1,0 +1,33 @@
+#include <stdio.h> // start
+
+// single line comment
+// second one in a row
+
+int main() {
+	/* multi line comment in single line */
+	int a = 10, b = 20;
+	
+	/* multi
+           line
+           comment */
+	int c = a + b;
+
+	// "Quoted String in single line comment"	
+	char *d = "This string has // comments which shouldn't be stripped";
+	char *e = "This string has // \"quoted comments\" which shouldn't be stripped";
+	char *f = "This string has /* multi-line comment */ which shouldn't be stripped";
+
+	/*
+	'Single quoted string in multi-line comment (syntactically incorrect)'
+	"Double quoted string in multi-line comment."
+	*/
+
+	char g = '//syntactically incorrect but making sure that program handles it';
+	char h = '\''; // Quoted single quote and comment after valid statement
+	char i = '/* once again, syntactically incorrect */';
+
+	return 0;
+}
+"Let's make sure that a syntactically incorrect file does not break the program.
+Here I am ommitting the closing quote. We can do the same with a single quote,
+which might be another test case to consider, but would have to be in a separate file.
